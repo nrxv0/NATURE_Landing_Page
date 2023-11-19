@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+section{
+    position: relative;
+    /* An element with position: relative; is positioned relative to its normal position. 
+    Setting the top, right, bottom, and left properties of a relatively-positioned element 
+    will cause it to be adjusted away from its normal position.
+     Other content will not be adjusted to fit into any gap left by the element */
+    width: 100%;
+    min-height: 100vh;
+    /* 100vh , means 100% of the viewport  height */
+    display: flex;
+    flex-direction: column;
+    /* cuz idirt flex , rj3o Kaml f row */
+    justify-content: flex-start;
+    background: url(ok.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: relative;
+    top: 0;
+    display: flex;
+    width: 100%;
+    padding: 30px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+
+}
+header nav a{
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 2px 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+/* :not(:last-child) is a CSS pseudo-class that selects all elements that are not the last child of their parent element.
+ It is often used to apply styles to all elements in a list except for the last one,
+ or to add a separator between list items without having an extra separator after the last item. */
+ header nav a:not(:last-child){
+    margin-right: 30px;
+ }
+header nav a:hover{
+    background: #fff;
+}
+.content{
+    max-width: 600px;
+    margin: 60px 100px;
+}
+.content .info h2{
+    color: #226A80;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    /* line-height is a CSS property that sets the height of a line box within an element. 
+    It specifies the amount of space that should be allocated for each line of text within the element,
+     and can be used to control the spacing between lines of text. */
+    margin-bottom: 30px;
+}
+.content .info h2 span{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600px;
+}
+.content .info p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.content .info-btn{
+    background: #226A80;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: 0.3s;
+    transition-property: background;
+}
+.content .info-btn:hover{
+background: #0C4F60;
+}
+.media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+.media-icons a{
+    position: relative;
+    color: #111;
+    font-size: 25px;
+    transition: 0.3s;
+    transition-property: trasnform;
+}
+.media-icons a:not(:last-child){
+    margin-right: 20px;
+}
+.media-icons a:hover{
+    transform: scale(1.5);
+}
+label{
+    display: none;
+}
+#check{
+    z-index: 3;
+      /*  bash yhliha tban lfoq l background hadik , mashi ta7tha */
+      /* z index works in positioned elements, relaativr , fixed, absolute,.. and note dtaatic which is the default */
+      display: none;
+      /* at the end we don't want it to appear */
+}
+
+
+
+
+/* ///////////// RESPOSIVE STYLES///////// */
+@media (max-width:900px){
+    header nav{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+    label:hover{
+        color: #fff;
+    }
+    label .close-btn{
+        display: none;
+    }
+#check:checked ~ header nav{
+    z-index: 2;
+      /*  bash yhliha tban lfoq l background hadik , mashi ta7tha */
+    position: fixed;
+    background: rgba(114, 223, 255, 0.9);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#check:checked ~ header nav a{
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+#check:checked ~ header label .menu.btn{
+    display: none;
+    /*  bash matbansh kitrj3 l backgrond zrqa fiha l nav bar */
+}
+#check:checked ~ header label .close-btn{
+    display: block;
+    position: fixed;
+    z-index: 2;
+    /*  bash yhliha tban lfoq l background hadik , mashi ta7tha */
+}
+label .menu.btn{
+    position: absolute;
+}
+header .logo{
+    position: absolute;
+    bottom: -3px;
+}
+c.ontent-info h2{
+    font-size: 45px;
+    line-height: 50px;
+}
+.content .info h2 span{
+    font-size: 40px;
+    font-weight: 600;
+}
+.content .info p{
+    font-size: 14px;
+}
+}
+
+
+
+
+/* ///////////////////// responsive for smaller scrrens ///////////  */
+/*  the above styles will be applied unless they are rewritten */
+@media (max-width: 560px){
+    .content .info h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .content .info h2 span{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .content .info p{
+        font-size: 14px;
+    }
+
+}
