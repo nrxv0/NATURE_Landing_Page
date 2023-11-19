@@ -15,8 +15,3 @@ Include a preview screenshot here. You can add an image directly, or you can hos
 - Navigation bar with a responsive menu (*using HTML and CSS only*)
 - Clean and minimalistic layout
 
-
-- Mention anyone whose code or work inspired you.
-- Give credit to external libraries or resources used.
-
-Feel free to customize the sections as needed and replace placeholders with your actual information. Additionally, make sure to replace the placeholder links with the actual links to your preview screenshot and license file.
