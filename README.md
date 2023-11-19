@@ -7,7 +7,7 @@ This repository contains a simple and responsive landing page with a navigation 
 
 Include a preview screenshot here. You can add an image directly, or you can host it on an image hosting service like Imgur and include the link.
 
-![Landing Page Preview](link_to_your_preview_image)
+![Landing Page Preview](https://github.com/rye2x/NATURE_Landing_Page/assets/115490651/34e0d47f-37eb-450e-a540-5285942addfc)
 
 ## Features
 
