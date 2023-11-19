@@ -4,7 +4,7 @@ This repository contains a simple and responsive landing page with a navigation 
 
 ## Preview
 
-Include a preview screenshot here.
+
 
 ## Features
 
